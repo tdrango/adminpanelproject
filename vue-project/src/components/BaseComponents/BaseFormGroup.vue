@@ -1,15 +1,15 @@
 <template>
-    <div 
+    <form 
         class="w-50 mx-auto text-left mt-15 mb-20"
         :class="{ 'has-error': hasError}"
     >
-        <label for=formKey class="w-100">{{ labelText }}</label>
+        <label :for=formKey class="w-100">{{ labelText }}</label>
         <input 
-            type=groupType 
-            name=formKey 
-            id=formKey 
+            :type=type 
+            :name=formKey 
+            :id=formKey 
             class="w-100 p-5 mt-5"
-            @input="updateInputValue"
+            :minlength="inputMinLength"
         >
         <span
             v-if="hasError"
@@ -17,11 +17,11 @@
         >
             {{ errorMsg }}
         </span>
-    </div>
+    </form>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, computed } from 'vue';
 
 const props = defineProps({
     labelText: {
@@ -48,10 +48,7 @@ const props = defineProps({
 
 });
 
-// const updateInputValue = (event) => {
-//     emit('update-input-value', {
-//         value: event.target.value,
-//         id: props.formKey
-//     })
-// };
+const inputMinLength = computed(() => {
+    props.type === 'password' ? 8 : null;
+});
 </script>

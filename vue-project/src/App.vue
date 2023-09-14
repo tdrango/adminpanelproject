@@ -1,10 +1,17 @@
 <template>
-  <div class="bg-primary text-primary vh-100 p-20">
-    <login-form company-name="Dobra Voda" />
+  <div class="bg-secondary text-primary vh-100">
+    <login-form v-if="mainStore.appNaviagtionStep === 1" />
+    <home v-if="mainStore.appNaviagtionStep === 2"/>
   </div>
 </template>
 
 <script setup>
-import loginForm from './components/loginForm.vue';
+import useMainStore from './stores/store';
 
+import loginForm from './components/loginForm.vue';
+import home from './components/home.vue';
+
+const mainStore = useMainStore();
+
+console.log(mainStore.appNaviagtionStep);
 </script>

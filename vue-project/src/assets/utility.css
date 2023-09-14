@@ -1,19 +1,20 @@
 /* Width Classes */
 .w-100 { width: 100%; }
+.w-95 { width: 95%; }
 .w-75 { width: 75%; }
 .w-50 { width: 50%; }
 .w-25 { width: 25%; }
 
 /* Color Classes */
-.bg-primary {background-color: #3D5A80; }
-.bg-secondary { background-color: #98C1D9; }
-.bg-tertiary { background-color: #E0FBFC; }
+.bg-primary {background-color: #15095E; }
+.bg-secondary { background-color: #F3F2FA; }
+.bg-tertiary { background-color: #322775; }
 .bg-white { background-color: white; }
 .bg-black { background-color: black; }
 
-.text-primary { color: #EE6C4D; }
+.text-primary { color: #15095E; }
 .text-black { color: black; }
-.text-white { color: white; }
+.text-white { color: #FFFFFF; }
 
 /* Margin classes */
 .m-5 { margin: 5px; }
@@ -21,13 +22,16 @@
 .m-15 { margin: 15px; }
 .m-20 { margin: 20px; } 
 .mx-auto { margin-left: auto; margin-right: auto; }
-
 .my-15 { margin-top: 15px; margin-bottom: 15px; }
+
 .mb-20 { margin-bottom: 20px; }
+.mb-50 { margin-bottom: 50px; }
 
 .mt-5 { margin-top: 5px; }
 .mt-15 { margin-top: 15px; }
 .mt-20 { margin-top: 20px; }
+
+.mr-10 { margin-right: 10px; }
 
 
 /* Padding classes */
@@ -42,6 +46,7 @@
 .align-start { align-items: start; }
 .align-end { align-items: end; }
 .justify-between { justify-content: space-between; }
+.flex-column { flex-direction: column;}
 
 /* Text align classes */
 .text-center { text-align: center; }
@@ -51,4 +56,14 @@
 /* Height classes */
 .h-100 { height: 100%; }
 .h-50 { height: 50% ;}
-.vh-100 { min-height: 100vh; height: 100% };
+.vh-100 { min-height: 100vh; height: 100% ;}    
+
+/* Cursor classes */
+.pointer { cursor: pointer !important; }
+
+/* Border-radius */
+.border-radius-5 { border-radius: 5px; }
+.border-radius-10 { border-radius: 10px; }
+
+/* Text style classes */
+.text-bold { font-weight: bold; }
