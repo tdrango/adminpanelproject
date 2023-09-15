@@ -1,5 +1,8 @@
 <template>
-    <div class="d-flex justify-start pointer mb-20">
+    <div 
+        class="d-flex justify-start pointer mb-20"
+        @click="handleSidebarButtonClicked"
+    >
         <i :class="iconClasses" class="mr-10" />
         <div>
             {{ buttonName }}
@@ -8,7 +11,9 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
+
+const emit = defineEmits(['sidebar-button-clicked'])
 
 defineProps({
     buttonName: {
@@ -20,4 +25,8 @@ defineProps({
         required: true
     }
 })
+
+const handleSidebarButtonClicked = () => {
+    emit('sidebar-button-clicked');
+};
 </script>

@@ -1,6 +1,7 @@
 /* Width Classes */
 .w-100 { width: 100%; }
 .w-95 { width: 95%; }
+.w-90 { width: 90%; }
 .w-75 { width: 75%; }
 .w-50 { width: 50%; }
 .w-25 { width: 25%; }
@@ -11,19 +12,21 @@
 .bg-tertiary { background-color: #322775; }
 .bg-white { background-color: white; }
 .bg-black { background-color: black; }
+.bg-lightblue { background-color: #68D7E6; }
 
 .text-primary { color: #15095E; }
 .text-black { color: black; }
 .text-white { color: #FFFFFF; }
+.text-gray { color: gray; }
+.text-lightblue { color: #68D7E6; }
 
 /* Margin classes */
 .m-5 { margin: 5px; }
 .m-10 { margin: 10px; }
 .m-15 { margin: 15px; }
 .m-20 { margin: 20px; } 
-.mx-auto { margin-left: auto; margin-right: auto; }
 .my-15 { margin-top: 15px; margin-bottom: 15px; }
-
+.my-5 { margin-top: 5px; margin-bottom: 5px; }
 .mb-20 { margin-bottom: 20px; }
 .mb-50 { margin-bottom: 50px; }
 
@@ -31,6 +34,7 @@
 .mt-15 { margin-top: 15px; }
 .mt-20 { margin-top: 20px; }
 
+.mx-auto { margin-left: auto; margin-right: auto; }
 .mr-10 { margin-right: 10px; }
 
 
@@ -39,6 +43,8 @@
 .p-10 { padding: 10px; }
 .p-15 { padding: 15px; }
 .p-20 { padding: 20px; }
+
+.pt-50 { padding-top: 50px; }
 
 /* Flex classes */
 .d-flex { display: flex; }
@@ -64,6 +70,16 @@
 /* Border-radius */
 .border-radius-5 { border-radius: 5px; }
 .border-radius-10 { border-radius: 10px; }
+.border-radius-15 { border-radius: 15px; }
 
 /* Text style classes */
 .text-bold { font-weight: bold; }
+
+/* Font size classes */
+.font-s8 { font-size: 8px; }
+.font-s10 { font-size: 8px; }
+.font-s12 { font-size: 12px; }
+.font-s14 { font-size: 14px; }
+.font-s18 { font-size: 18px; }
+.font-s24 { font-size: 24px; }
+.font-s28 { font-size: 28px; }

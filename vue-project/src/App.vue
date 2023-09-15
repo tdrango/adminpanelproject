@@ -9,7 +9,7 @@
 import useMainStore from './stores/store';
 
 import loginForm from './components/loginForm.vue';
-import home from './components/home.vue';
+import home from './components/HomeScreen.vue';
 
 const mainStore = useMainStore();
 

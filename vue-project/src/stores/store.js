@@ -4,7 +4,7 @@ import { defineStore } from 'pinia';
 const useMainStore = defineStore('mainStore', {
   state: () => ({
     appNaviagtionStep: 2,
-    currentPage: 'dashboard'
+    currentPage: 'Dashboard'
   })
 });
 

@@ -1,8 +1,8 @@
 <template>
     <div class="the-sidebar-container d-flex justify-between flex-column bg-primary text-white p-20">
         <div class="the-sidebar">
-            <div class="d-flex justify-between mb-50">
-                <p>My Company</p>
+            <div class="d-flex justify-between mb-50 pointer">
+                <p @click="mainStore.$patch({ currentPage: 'Dashboard' })">My Company</p>
                 <span class="cursor-pointer">
                     <i class="fa-regular fa-bell" />
                 </span>
@@ -13,6 +13,7 @@
                 :key="name"
                 :button-name="name"
                 :icon-classes="iconClasses"
+                @sidebar-button-clicked="mainStore.$patch({ currentPage: name })"
             />
         </div>
 
@@ -25,6 +26,9 @@
 
 <script setup>
 import { sideBarButtons } from '../helpers/helperFunctions.js';
+import useMainStore from '../stores/store';
+
+const mainStore = useMainStore();
 
 import BaseSidebarButton from './BaseComponents/BaseSidebarButton.vue';
 import AccountInfoButton from './PersonalAccount/AccountInfoButton.vue';
