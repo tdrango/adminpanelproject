@@ -18,15 +18,28 @@
             />
             
             <dashboard-website-user 
-                v-for="i in 2"
-                :key="i"
+                :key="websites"
+                title="websites"
+                :array-details="websiteDetails"
+
+            />
+
+            <dashboard-website-user 
+                :key="users"
+                title="users"
+                :array-details="userDetails"
+
             />
         </div>
     </div>
 </template>
 
 <script setup>
-import { dashboardCardsDetails } from '../../../helpers/helperFunctions';
+import { 
+    dashboardCardsDetails, 
+    websiteDetails, 
+    userDetails } 
+from '../../../helpers/consts.js';
 
 import DashboardBasicDetails from './DashboardBasicDetails.vue';
 import DashboardCards from './DashboardCards.vue';

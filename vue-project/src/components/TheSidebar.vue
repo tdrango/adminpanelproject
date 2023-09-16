@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { sideBarButtons } from '../helpers/helperFunctions.js';
+import { sideBarButtons } from '../helpers/consts.js';
 import useMainStore from '../stores/store';
 
 const mainStore = useMainStore();
