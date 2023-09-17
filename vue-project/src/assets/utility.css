@@ -19,6 +19,7 @@
 .text-white { color: #FFFFFF; }
 .text-gray { color: gray; }
 .text-lightblue { color: #68D7E6; }
+.text-danger { color: red; }
 
 /* Margin classes */
 .m-5 { margin: 5px; }
@@ -90,3 +91,9 @@
 .font-s18 { font-size: 18px; }
 .font-s24 { font-size: 24px; }
 .font-s28 { font-size: 28px; }
+
+/* Text decoration */
+.link {
+    color: blue;
+    text-decoration: underline;
+}

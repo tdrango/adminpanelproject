@@ -9,7 +9,7 @@
             </div>
         
             <base-sidebar-button 
-                v-for="{ name, iconClasses} in sideBarButtons()"
+                v-for="{ name, iconClasses} in sideBarButtons(mainStore.pluginType)"
                 :key="name"
                 :button-name="name"
                 :icon-classes="iconClasses"
@@ -18,8 +18,8 @@
         </div>
 
         <account-info-button 
-            username="Tomislav"
-            plugin-type="Pro"
+            :username="mainStore.currentUsername"
+            :plugin-type="mainStore.pluginType"
         />
     </div>
 </template>
@@ -29,7 +29,6 @@ import { sideBarButtons } from '../helpers/consts.js';
 import useMainStore from '../stores/store';
 
 const mainStore = useMainStore();
-
 import BaseSidebarButton from './BaseComponents/BaseSidebarButton.vue';
 import AccountInfoButton from './PersonalAccount/AccountInfoButton.vue';
 </script>

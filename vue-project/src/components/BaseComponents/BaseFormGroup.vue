@@ -9,7 +9,7 @@
             :name=formKey 
             :id=formKey 
             class="w-100 p-5 mt-5"
-            :minlength="inputMinLength"
+            @input="handleEmitPayload"
         >
         <span
             v-if="hasError"
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue';
+const emit = defineEmits(['input-change']);
 
 const props = defineProps({
     labelText: {
@@ -48,7 +48,10 @@ const props = defineProps({
 
 });
 
-const inputMinLength = computed(() => {
-    props.type === 'password' ? 8 : null;
-});
+const handleEmitPayload = (event) => {
+    emit('input-change', {
+        value: event.target.value,
+        id: props.formKey
+    })
+};
 </script>

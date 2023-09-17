@@ -13,7 +13,7 @@
         </div>
         <div
             class="pointer"
-            @click="mainStore.$patch({ appNaviagtionStep: 1 })"
+            @click="mainStore.$patch({ appNavigationStep: 'login' })"
         >
             <i class="fa-solid fa-power-off" />
         </div>

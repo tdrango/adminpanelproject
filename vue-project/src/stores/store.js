@@ -3,8 +3,11 @@ import { defineStore } from 'pinia';
 
 const useMainStore = defineStore('mainStore', {
   state: () => ({
-    appNaviagtionStep: 2,
-    currentPage: 'Dashboard'
+    pluginType: 'Free',
+    currentUsername: '',
+    appNavigationStep: 'login',
+    currentPage: 'Dashboard',
+    currentUsers: []
   })
 });
 

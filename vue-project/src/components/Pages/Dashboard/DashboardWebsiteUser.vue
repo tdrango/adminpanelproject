@@ -40,6 +40,4 @@ const props = defineProps({
 const iconClasses = computed(() => {
     return props.title === 'websites' ? 'fa-solid fa-globe' : 'fa-solid fa-users'
 });
-
-console.log(props.arrayDetails);
 </script>

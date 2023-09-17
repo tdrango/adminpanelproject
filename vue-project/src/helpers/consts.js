@@ -1,29 +1,56 @@
-export const sideBarButtons = () => [
-    {
-        name: 'Dashboard',
-        iconClasses: 'fa-solid fa-chart-line'
-    },
-    {
-        name: 'Websites',
-        iconClasses: 'fa-solid fa-globe'
-    },
-    {
-        name: 'Users',
-        iconClasses: 'fa-solid fa-user'
-    },
-    {
-        name: 'Toolbox',
-        iconClasses: 'fa-solid fa-toolbox'
-    },
-    {
-        name: 'Settings',
-        iconClasses: 'fa-solid fa-gear'
-    },
-    {
-        name: 'Help',
-        iconClasses: 'fa-regular fa-circle-question'
+export const sideBarButtons = (pluginType) => {
+    if (pluginType === 'Pro') {
+        return [
+            {
+                name: 'Dashboard',
+                iconClasses: 'fa-solid fa-chart-line'
+            },
+            {
+                name: 'Websites',
+                iconClasses: 'fa-solid fa-globe'
+            },
+            {
+                name: 'Users',
+                iconClasses: 'fa-solid fa-user'
+            },
+            {
+                name: 'Toolbox',
+                iconClasses: 'fa-solid fa-toolbox'
+            },
+            {
+                name: 'Settings',
+                iconClasses: 'fa-solid fa-gear'
+            },
+            {
+                name: 'Help',
+                iconClasses: 'fa-regular fa-circle-question'
+            }
+        ];
+    } else {
+        return [
+            {
+                name: 'Dashboard',
+                iconClasses: 'fa-solid fa-chart-line'
+            },
+            {
+                name: 'Websites',
+                iconClasses: 'fa-solid fa-globe'
+            },
+            {
+                name: 'Toolbox',
+                iconClasses: 'fa-solid fa-toolbox'
+            },
+            {
+                name: 'Settings',
+                iconClasses: 'fa-solid fa-gear'
+            },
+            {
+                name: 'Help',
+                iconClasses: 'fa-regular fa-circle-question'
+            }
+        ];
     }
-];
+};
 
 export const dashboardCardsDetails = () => [
     {
@@ -99,3 +126,30 @@ export const userDetails = [
         secondCell: 'lucia'
     }       
 ];
+
+export const formGroupDetails = [
+    {
+        labelText: "Email",
+        type: "email",
+        formKey: "inputEmail",
+        value: '',
+        hasError: false,
+        errorMsg: "Please enter email"
+    },
+    {
+        labelText: "Username",
+        type: "text",
+        formKey: "inputUsername",
+        value: '',
+        hasError: false,
+        errorMsg: "Please enter username"
+    },
+    {
+        labelText: "Password",
+        type: "password",
+        formKey: "inputPassword",
+        value: '',
+        hasError: false,
+        errorMsg: "Please enter password"
+    }
+]
