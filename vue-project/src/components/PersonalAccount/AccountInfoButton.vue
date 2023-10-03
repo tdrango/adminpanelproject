@@ -15,7 +15,9 @@
             class="pointer"
             @click="mainStore.$patch({ appNavigationStep: 'login' })"
         >
-            <i class="fa-solid fa-power-off" />
+            <i class="fa-solid fa-power-off" 
+                @click="handleLogout"
+            />
         </div>
     </div>
 </template>
@@ -24,6 +26,9 @@
 import { defineProps } from 'vue';
 
 import useMainStore from '../../stores/store';
+import { useAuth0 } from '@auth0/auth0-vue';
+
+const { logout } = useAuth0();
 
 const mainStore = useMainStore();
 
@@ -37,6 +42,10 @@ defineProps({
         default: 'Free'
     }
 })
+
+const handleLogout = () => {
+    logout({ logoutParams: { returnTo: window.location.origin } });
+}
 </script>
 
 <style scoped>

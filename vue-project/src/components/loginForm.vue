@@ -6,7 +6,7 @@
 
         <base-form-group 
             label-text="Username"
-            type="username"
+            type="text"
             form-key="inputUsername"
             @input-change="handleInputValue"
         />
@@ -49,16 +49,18 @@ onMounted(() => {
 });
 
 const loginButtonClicked = () => {
+    console.log(mainStore.currentUsername);
     if (mainStore.currentUsername === '') {
+        console.log('here')
         return;
     } 
     if (mainStore.currentUsername === 'Tomislav') {
         mainStore.$patch({ pluginType: 'Pro' });
     } else {
         mainStore.$patch({ pluginType: 'Free' });
-
     }
-    mainStore.$patch({ appNavigtionStep: 'home' })
+
+    mainStore.$patch({ appNavigationStep: 'home' })
 };
 
 const handleInputValue = (payload) => {

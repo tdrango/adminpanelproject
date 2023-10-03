@@ -1,11 +1,15 @@
 <template>
-    <div class="w-50 mx-auto my-15">
-        <button 
-        @click="handleButtonClick"
-        class="w-100 p-5" 
+    <div
+        :class="containerClasses" 
+        class="w-50 mx-auto my-15"
     >
-        {{ buttonText }}
-    </button>
+        <button 
+            class="w-100 p-5" 
+            :class="buttonClasses"
+            @click="handleButtonClick"
+        >
+            {{ buttonText }}
+        </button>
     </div>
 </template>
 
@@ -18,10 +22,18 @@ defineProps({
     buttonText: {
         type: String,
         default: 'Button Text'  
+    },
+    buttonClasses: {
+        type: String,
+        default: ''
+    },
+    containerClasses: {
+        type: String,
+        default: ''
     }
 });
 
-const handleButtonClick = () => {
-    emit('button-clicked');
+const handleButtonClick = (payload) => {
+    emit('button-clicked', payload);
 };
 </script>

@@ -38,17 +38,17 @@
     let allFieldsFilled = true;
   
     formGroupDetails.value.forEach(details => {
-        // console.log(details.value);
       if (!details.value) {
         details.hasError = true;
         allFieldsFilled = false;
       }
     });
-  
+
     if (!allFieldsFilled) {
         dangerToast('Error signing up!');
     } else {
-        successToast('Successfully signed up!');
+        successToast('Successfully signed up! Please log in.');
+        mainStore.$patch({ appNavigationStep: 'login' })
     }
   };
   

@@ -3,7 +3,7 @@
         class="w-50 mx-auto text-left mt-15 mb-20"
         :class="{ 'has-error': hasError}"
     >
-        <label :for=formKey class="w-100">{{ labelText }}</label>
+        <label :for=formKey class="w-100 font-s16">{{ labelText }}</label>
         <input 
             :type=type 
             :name=formKey 

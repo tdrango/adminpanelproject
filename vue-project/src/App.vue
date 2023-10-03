@@ -1,17 +1,16 @@
 <template>
   <div class="bg-secondary text-primary vh-100">
-    <login-form v-if="mainStore.appNavigationStep === 'login'" />
-    <sign-up-form v-if="mainStore.appNavigationStep === 'signUp'" />
-    <home-screen v-if="mainStore.appNavigationStep === 'home'"/>
+      <login-button v-if="!isAuthenticated"/>
+      <home-screen v-if="isAuthenticated"/>
   </div>
 </template>
 
 <script setup>
-import useMainStore from './stores/store';
+console.log('here')
+import { useAuth0 } from '@auth0/auth0-vue';
 
-import LoginForm from './components/LoginForm.vue';
 import HomeScreen from './components/HomeScreen.vue';
-import SignUpForm from './components/SignUpForm.vue';
+import LoginButton from './components/LoginButton.vue';
 
-const mainStore = useMainStore();
-</script>
+const { isAuthenticated } = useAuth0();
+</script> 

@@ -22,3 +22,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+
+.select-add-menu {
+    min-width: 200px;
+    left: -50px;
+}

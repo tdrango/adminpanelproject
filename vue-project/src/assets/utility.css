@@ -13,10 +13,12 @@
 .bg-white { background-color: white; }
 .bg-black { background-color: black; }
 .bg-lightblue { background-color: #68D7E6; }
+.bg-success { background-color: rgb(32, 177, 32); }
+.bg-danger { background-color: rgb(246, 34, 34); }
 
 .text-primary { color: #15095E; }
 .text-black { color: black; }
-.text-white { color: #FFFFFF; }
+.text-white { color: #FFFFFF !important; }
 .text-gray { color: gray; }
 .text-lightblue { color: #68D7E6; }
 .text-danger { color: red; }
@@ -37,7 +39,9 @@
 .mt-15 { margin-top: 15px; }
 .mt-20 { margin-top: 20px; }
 
-.mx-auto { margin-left: auto; margin-right: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; } 
+.ml-auto { margin-left: auto; }
+
 .mr-5 { margin-right: 5px; }
 .mr-10 { margin-right: 10px; }
 .mr-20 { margin-right: 20px; }
@@ -72,13 +76,19 @@
 .pointer { cursor: pointer !important; }
 
 /* Border classes */
+.no-border { border: 0; }
 .border { border: 2px solid gray; }
 .border-top { border-top: 1px solid rgba(223, 223, 223, 0.3); }
+.border-top-colored-primary { border-top: 1px solid #15095E; }
 
 /* Border-radius */
+.border-radius-inherit { border-radius: inherit; }
 .border-radius-5 { border-radius: 5px; }
 .border-radius-10 { border-radius: 10px; }
 .border-radius-15 { border-radius: 15px; }
+
+
+.border-radius-top-10 { border-top-left-radius: 10px; border-top-right-radius: 10px; }
 
 /* Text style classes */
 .text-bold { font-weight: bold; }
@@ -96,4 +106,13 @@
 .link {
     color: blue;
     text-decoration: underline;
+}
+
+/* Position classes */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
 }

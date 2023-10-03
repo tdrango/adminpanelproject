@@ -7,7 +7,9 @@ const useMainStore = defineStore('mainStore', {
     currentUsername: '',
     appNavigationStep: 'login',
     currentPage: 'Dashboard',
-    currentUsers: []
+    currentUsers: [],
+    isAddNewModalOpen: false,
+    modalCurrentlyAdding: ''
   })
 });
 
